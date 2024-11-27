@@ -1,0 +1,13 @@
+<!-- /layouts/flexible.html.erb -->
+<% rolls = params.fetch("num_dice").to_i%>
+<% sides = params.fetch("sides").to_i%>
+
+<h1><%= rolls %>d<%= sides %></h1>
+
+<ul>
+  <% for roll in 1..rolls do %>
+    <li>
+      <%= rand(1..sides) %>
+    </li>
+  <% end %>
+</ul>
